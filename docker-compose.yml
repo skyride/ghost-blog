@@ -16,9 +16,9 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     environment:
-      - MYSQL_DATABASE=ghost
-      - MYSQL_USER=ghost
-      - MYSQL_PASSWORD=XPKyYskz
+      - MYSQL_DATABASE=${database__connection__database}
+      - MYSQL_USER=${database__connection__user}
+      - MYSQL_PASSWORD=${database__connection__password}
       - MYSQL_RANDOM_ROOT_PASSWORD=1
 
 volumes:
