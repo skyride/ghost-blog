@@ -2,6 +2,7 @@ version: "3"
 services:
   ghost:
     image: skyride/ghost:2.11.1
+    restart: always
     volumes:
       - ghostcontent:/var/lib/ghost/content/
     environment:
