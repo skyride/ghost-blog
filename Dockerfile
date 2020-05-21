@@ -1,4 +1,4 @@
-FROM ghost:2.38.1
+FROM ghost:2.11.1
 
 # S3 adapter
 RUN npm install ghost-storage-adapter-s3@2.8.0

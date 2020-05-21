@@ -2,6 +2,8 @@ version: "3"
 services:
   ghost:
     build: .
+    volumes:
+      - ghostcontent:/var/lib/ghost/content/
     environment:
       - server__port=${PORT}
     env_file:
@@ -23,3 +25,4 @@ services:
 
 volumes:
   mysqldata:
+  ghostcontent:
