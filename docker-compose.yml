@@ -2,10 +2,12 @@ version: "3"
 services:
   ghost:
     build: .
+    environment:
+      - server__port=${PORT}
     env_file:
       - .env
     ports:
-      - ${PORT}:2368
+      - ${PORT}:${PORT}
     depends_on:
       - mysql
 
