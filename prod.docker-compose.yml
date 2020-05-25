@@ -1,9 +1,7 @@
 version: "3"
 services:
   ghost:
-    image: skyride/ghost:2.38.1
-    volumes:
-      - ghostcontent:/var/lib/ghost/content/
+    image: skyride/ghost:3.16.1
     environment:
       - server__port=${PORT}
     env_file:
@@ -14,7 +12,7 @@ services:
       - mysql
 
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - mysqldata:/var/lib/mysql
     environment:
